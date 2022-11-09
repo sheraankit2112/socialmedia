@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/uploadpost.css">
+</head>
+<body>
+    <nav>
+        <div class="logo"><a href="" >namaste india</a></div>
+        
+        <div class="lis">
+          <ul class="lists">
+            <li><a href="" class="home">Home</a></li>
+            <li><a href="" class="profile">My profile</a></li>
+            <li><a href="" class="uploadposts">Upload post</a></li>
+            <li><a href="" class="chat">Chat</a></li>
+            <li><a href="{% url 'logout' %}" class="logout">Logout</a></li>
+          </ul>
+  
+        </div>
+      </nav>
+    
+      <br><br><br><br><br>
+    <div class="uploadpost"><br><br>
+ 
+        <div class="h1"><h1>Upload your Post</h1></div>
+        <div class="form">
+            <form action=" " method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" accept="image/*" name="post">
+                <textarea  name="caption" rows="8" cols="40" style="font-size:1.5rem; border-radius:0.5rem;" placeholder="Write your caption here(max words=30)"></textarea><br><br><br>
+                <input type="submit" value="upload">
+
+            </form>
+            
+        </div>
+    </div>
+    
+</body>
+</html>

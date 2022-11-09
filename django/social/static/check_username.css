@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+body{
+    height:100vh;
+    position: relative;
+    background-image: url(../static/360_F_240635575_EJifwRAbKsVTDnA3QE0bCsWG5TLhUNEZ.jpg);
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+}
+
+.username{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    padding: 2.5rem;
+    height:27vh;
+    width: 40vh;;
+    background-color: beige;
+    box-shadow: 2px 1px 10px 7px rgb(137, 174, 255);
+}
+.box{
+    
+    height: 100%;
+}
+.forgotpas{
+    
+    font-size:2.5rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.forms form label{
+    font-size: 2rem;
+
+}
+.forms form input{
+    height:3rem;
+    width:100%;
+    border-radius: 0.5rem;
+}
+.forms form input[type=submit]{
+    background-color: rgb(92, 228, 255);;
+}
+
+

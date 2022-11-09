@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Responsive Navbar | CodingNepal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/homepage.css">
+    <style>
+      .success{
+      height:3rem;
+      padding:0.3rem;
+      color:rgb(255, 255, 255);
+      background-color: rgb(4, 135, 0);
+      width: 100% !important;
+      font-size: 1rem;
+      text-align: center;
+  }
+  .bottom{
+            font-size:2rem;
+
+        }
+    </style>
+    
+  </head>
+  <body>
+    <nav>
+      <div class="logo"><a href="" >namaste india</a></div>
+      
+      <div class="lis">
+        <ul class="lists">
+          <li><a href="" class="home">Home</a></li>
+          <li><a href="" class="profile">My profile</a></li>
+          <li><a href="{% url 'uploadpost' %}" class="uploadpost">Upload post</a></li>
+          <li><a href="" class="chat">Chat</a></li>
+          <li><a href="{% url 'logout' %}" class="logout">Logout</a></li>
+        </ul>
+
+      </div>
+    </nav>
+    {% if messages %}
+        {% for i in messages %}
+        <div class="{{i.tags}}">
+                
+            <div class="bottom">{{i}}</div>
+        </div>
+        {% endfor %}
+    {% endif %}
+    <br><br><br><br><br>
+    {% for i in posts %}
+    <div class="posts">
+        <div class="name">
+            <img src="./MC_SightWords-Or.jpg" alt="">
+            <p class="username"><span class="usernamebold">{{i.username}}</span> made a post</p>
+        </div>
+        <div class="picture"><img src="{{i.post.url}}" alt=""></div>
+        <div class="caption"><p>{{i.caption}}</p></div>
+        <div class="likes">
+          <ul class="likee">
+            <li><a href="" class="like">like</a></li>
+            <li><a href="" class="dislike">dislike</a></li>
+          </ul>
+        </div>
+    </div>
+    {% endfor %}
+  </body>
+</html>

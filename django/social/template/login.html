@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/login.css">
+    <style>
+        .errors{
+            color:red;
+            text-align: center;
+            font-size:1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login">
+        <div class="tophead">
+            <img class="logo" src="../static/images-removebg-preview.png" alt="">
+           
+        </div>
+        <div class="bottom">
+            <div class="left">
+                <img class="namaste" src="../static/namaste-hand-sign-gesture-cartoon-icon-illustration-people-medical-icon-concept-isolated-premium-fla-removebg-preview.png" alt="" class="">
+            </div>
+            <div class="right">
+                <div class="blank"></div>
+                <div class="top">
+                    <img src="../static/1000_F_223507324_jKl7xbsaEdUjGr42WzQeSazKRighVDU4-removebg-preview.png" alt="" class="">
+                </div>
+                <div class="welcome" ><h1>WELCOME</h1</div>
+                <div class="form"><br><br>
+                    <form action=" " method="post" novalidate>
+                        {% csrf_token %}
+                        {% for i in form %}
+                        {{i}}{% if i.errors %}<br><span class="errors">{{i.errors|striptags}}</span>{% endif %}<br><br>
+                        {% endfor %}
+                        
+                        <span class="forgot"><a href="{% url 'forgotpassword' %}">Forgot password?</a></span>
+                        {% if form.non_field_errors %}<br><br><span class="errors">{{form.non_field_errors|striptags}}</span>{% endif %}
+                        <br><br><br>
+                        <input type="submit" value="Login"><br><br><br>
+                        <hr><img class="or" src="../static/o-r-initial-logo-letter-260nw-1245639820-removebg-preview.png" alt=""><br><br>
+                        <a href=""><img src="../static/179326-removebg-preview.png" alt="" class="social"></a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{% url 'social:begin' 'facebook' %}"><img src="../static/145802-removebg-preview.png" alt="" class="social"></a><br><br>
+                        <p class="need">Need an Account?  &nbsp;<span class="signup"><a href="{% url 'signup' %}">Signup here</a></span></p>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

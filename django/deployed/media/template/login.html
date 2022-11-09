@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/login.css">
+    <style>
+        .success{
+            height:5rem;
+            width: 100%;
+            padding:1rem;
+            text-align: left;
+            font-size: 2rem;
+            color:white;
+            background-color: green;
+
+        }
+        .error{
+            color:red;
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+    {% for i in messages %}
+
+    <small {% if i.tags %} class="{{i.tags}}" {% endif %}>{{i}}</small>
+    {% endfor %}
+    <br><br><br>
+    {% endif %}
+    <div class="container">
+        <div class="title">LOGIN</div>
+        <div class="formm">
+            <form action=" " method="post" novalidate>
+                {% csrf_token %}
+                {% for i in form %}
+                {{i}}{% if i.errors %}<br><span class="error">{{i.errors|striptags}}</span>{% endif %}<br><br><br>
+                {% endfor %}
+                {% if form.non_field_errors %}
+                <span class="error">{{form.non_field_errors}}</span>
+                {% endif %}
+                <br><br><br><br><br>
+                <input type="submit" value="login"><br><br>
+                <a href="{% url 'signup' %}" style="font-size:2rem; text-align: center;">Singup</a>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>

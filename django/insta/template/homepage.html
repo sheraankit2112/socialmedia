@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{bio.name}}<br><br>
+    {{bio.username}}<br><br>
+    <img src="{{bio.profile.url}}" alt="" height="100" width="100"><br><br>
+    <form action=" " method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" accept="image/*" name="profile">
+        <input type="submit" value="upload">
+    </form>
+    <br><br>
+    <a href="{% url 'alluser' %}">alluser</a><br><br>
+    {% for i in post %}
+    <img src="{{i.post.url}}" alt="" height="200" width="200">
+    <br>
+    {{i.username}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <a href="{% url 'deletepost' i.id %}">delete</a><br><br><br>
+    {% endfor %}
+
+    
+</body>
+</html>

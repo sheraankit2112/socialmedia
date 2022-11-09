@@ -1,0 +1,313 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+body{
+    background-image: url(../static/360_F_240635575_EJifwRAbKsVTDnA3QE0bCsWG5TLhUNEZ.jpg);
+    background-repeat: no-repeat;
+    
+    background-size: cover;
+}
+
+.login{
+    height:90vh;
+    width: 70%;
+    margin:8rem auto;;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 1px 10px 7px rgb(0, 85, 255);
+}
+.login .tophead{
+    padding:2rem;
+    height:10%;
+    width: 100%;
+    text-align: center;
+}
+
+.login .tophead .logo{
+    display: inline-block;
+    height: 10rem;
+    width: 20rem;
+    margin-top:-0.6rem;
+    
+}
+
+.login .bottom{
+   
+    height:90%;
+    width: 100%;
+}
+.login .bottom::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.login .bottom .left{
+    
+    float: left;
+    height:100%;
+    width: 50%;
+    padding:1rem;
+    
+} 
+.login .bottom .left .namaste{
+    height:500px;
+    width: 500px;
+}
+.login .bottom .right{
+    
+    float:right;
+    height: 100%;
+    width: 50%;
+}
+
+.login .bottom .right .top{
+    text-align: center;
+}
+.login .bottom .right .top img{
+    height: 8rem;
+    width: 8rem;
+}
+.login .bottom .right .welcome{
+    text-align: center;
+}
+.login .bottom .right .welcome h1{
+    font-size: 3rem;
+    color:black;
+}
+.blank{
+    height:4rem;
+}
+.form form input{
+    text-align: center;
+    border-style: none;
+    border-color: rgb(0, 98, 255);
+    border-bottom: 3px solid  rgb(0, 98, 255);
+    background-color: rgb(255, 255, 255);
+    width:50%;
+    height:4rem;
+    font-size: 2rem;;
+    outline: none;
+
+}
+.form form input[type=submit]{
+    border:0px solid rgb(2, 74, 191);
+    border-radius: 2rem;
+    background-color:rgb(2, 74, 191); ;
+    color: white;
+}
+.form form input[type=submit]:hover{
+    background-color: rgb(0, 167, 222);
+}
+.forgot{
+    margin-left:25%;
+    width:50%;
+}
+.forgot a{
+    text-decoration: none;
+    color:rgb(103, 93, 93);
+    font-size: 1.5rem;
+}
+.forgot a:hover{
+    color:rgb(53, 55, 56);
+}
+
+.or{
+    height:13%;;
+    width: 14%;;
+    margin-top:-6%;
+}
+hr{
+    width:50%;
+    margin:0 auto;
+}
+.social{
+    display: inline-block;
+    height:6%;
+    width: 7%;
+    margin-top:-10rem;
+}
+.need{
+    font-size:1.5rem;
+}
+.signup a{
+    text-decoration: none;
+    color:rgb(2, 74, 191);
+    font-size: 1.7rem;;
+    
+}
+@media screen and (max-width: 500px){
+   
+    .bottom{
+        clear:both;
+    }
+    .login{
+        height:90vh;
+    }
+    .bottom .left{
+        float:none;
+        clear:both;
+        display: block;
+        width:100% !important;
+        height:16rem !important;
+        text-align: center !important;
+        padding: 0 !important;
+        
+    }
+    .bottom .right{
+        float:none;
+        clear:both;
+        display: block;
+        width:100% !important;
+        text-align: center !important;
+        padding: 0 !important;
+        
+        
+    }
+    .namaste{
+        height:20rem !important;
+        width:20rem !important;
+        margin:auto !important;
+        
+    }
+    .login .bottom .right .top img{
+        height: 5rem !important;
+        width: 5rem !important;
+        
+    }
+    .login .bottom .right .welcome h1{
+        font-size: 1.5rem !important;
+        
+    }
+    .blank{
+        height:0rem !important;
+    }
+    .form form input{
+        
+        width:50%;
+        height:2rem !important;
+        font-size: 1rem !important;
+        outline: none;
+    
+    }
+    .form form input[type=submit]{
+        border:0px solid rgb(2, 74, 191);
+        border-radius: 2rem;
+        background-color:rgb(2, 74, 191); ;
+        color: white;
+    }
+    .forgot a{
+        font-size:1rem !important;
+        margin:0 !important;
+       
+    }
+    .errors{
+        font-size:1rem !important;
+    }
+    .need{
+        font-size:1rem;
+    }
+    .signup a{
+        text-decoration: none;
+        color:rgb(2, 74, 191);
+        font-size: 1.2rem;;
+        
+    }
+    
+}
+@media (min-width:500px) and  (max-width:1126px) {
+    .login{
+        height: 90vh;
+    }
+    .bottom{
+        clear:both;
+    }
+    .bottom .left{
+        float:none;
+        clear:both;
+        display: block;
+        width:100% !important;
+        height:16rem !important;
+        text-align: center !important;
+        padding: 0 !important;
+        
+    }
+    .bottom .right{
+        float:none;
+        clear:both;
+        display: block;
+        width:100% !important;
+        text-align: center !important;
+        padding: 0 !important;
+        
+        
+    }
+    .namaste{
+        height:20rem !important;
+        width:20rem !important;
+        margin:auto !important;
+        
+    }
+    .login .bottom .right .top img{
+        height: 5rem !important;
+        width: 5rem !important;
+        
+    }
+    .login .bottom .right .welcome h1{
+        font-size: 1.5rem !important;
+        
+    }
+    .blank{
+        height:0 !important;
+    }
+    .errors{
+        font-size:1rem !important;
+    }
+    .form form input{
+        
+        width:50%;
+        height:2rem !important;
+        font-size: 1rem !important;
+        outline: none;
+    
+    }
+    .form form input[type=submit]{
+        border:0px solid rgb(2, 74, 191);
+        border-radius: 2rem;
+        background-color:rgb(2, 74, 191); ;
+        color: white;
+    }
+    .forgot a{
+        font-size:1rem !important;
+        margin:0 !important;
+       
+    }
+    .or{
+        height:7% !important;;
+        width: 8% !important;;
+        margin-top:-4%;
+    }
+    hr{
+        width:50%;
+        margin:0 auto;
+    }
+    .social{
+        display: inline-block;
+        height:3% !important;
+        width: 4% !important;
+        margin-top:-6%;
+    }
+    .need{
+        font-size:1.2rem;
+    }
+    .signup a{
+        text-decoration: none;
+        color:rgb(2, 74, 191);
+        font-size: 1.4rem;;
+        
+    }
+
+    
+}

@@ -1,0 +1,289 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-size:10px;
+  }
+  body{
+    
+    background-color: #90f4ff;
+  }
+  nav{
+    background-color: #0172c8;
+    height:8rem;
+    padding:2rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width:100%;
+  }
+  nav ul{
+    float:right;
+    text-align: center;
+    margin-right:10rem;
+  }
+  li{
+    display: inline-block;
+    padding:0.5rem 2rem;
+
+  }
+  li a{
+    font-size:2rem;
+    color:white;
+    padding:0.5rem 1rem;
+  }
+  li a:hover{
+    padding:0.5rem 1rem;
+    background-color: #17507b;
+    color:white;
+    border-radius: 1rem;
+  }
+  .logout:hover{
+    padding:0.5rem 1rem;
+    background-color: #ff0c0c;
+    color:white;
+    border-radius: 1rem;
+
+  }
+  .chat:hover{
+    padding:0.5rem 1rem;
+    background-color: #ddd91c;
+    color:rgb(0, 0, 0);
+    border-radius: 1rem;
+
+  }
+  .profile:hover{
+    padding:0.5rem 1rem;
+    background-color:#17507b;
+    color:rgb(255, 255, 255);
+    border-radius: 1rem;
+
+  }
+  .home:hover{
+    padding:0.5rem 1rem;
+    background-color:#568b00;
+    color:rgb(255, 255, 255);
+    border-radius: 1rem;
+
+  }
+  
+  .logo a{
+    font-size:3rem;
+    color:white;
+    font-weight: 700;
+    font-family: cursive;
+    float:left;
+    margin-left:6rem;
+  }
+
+.posts{
+    width:50%;
+    height:80vh;
+    border:0.2px solid rgb(170, 157, 157);
+    margin:4rem auto;
+    background-color: rgb(242, 230, 215);
+    
+}
+.posts .name{
+    padding:1rem;
+    background-color: rgb(242, 230, 215);
+    height:7rem;
+}
+
+.posts .name img{
+    display: inline-block;
+    height:5rem;
+    width: 5rem;
+    border-radius: 3rem;;
+}
+
+.username{
+    font-size:1.8rem;
+    color:black;
+    display:block;
+    margin-top:-4rem !important;
+    margin-left:7rem;
+}
+.usernamebold{
+    font-size: 1.8rem;
+    color:black;
+    font-weight: 600;
+    margin-top:-4rem;
+   
+}
+.picture{
+    height:38rem;
+    background-color: aqua;
+    object-fit: cover;
+}
+.picture img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+.caption{
+    padding:2rem;
+    background-color: rgb(242, 230, 215);
+}
+.caption p{
+    font-size: 1.7rem;
+    color:black;
+}
+.likes{
+    background-color: rgb(242, 230, 215);
+}
+
+
+
+.likee li{
+    display: inline-block;
+    padding:0.3rem 0.7rem;
+    color:black;
+}
+.likee{
+    margin-left:3rem;
+}
+
+.likee li a{
+    padding:0.3rem 0.7rem;
+    color:black;
+    border:0.3px solid black;
+    border-radius:1rem;
+    
+
+}
+.like:hover{
+    padding:0.5rem 1rem;
+    background-color: #0057c2;
+    color:white;
+    border-radius: 1rem;
+
+}
+.dislike:hover{
+    padding:0.5rem 1rem;
+    background-color: #c20000;
+    color:white;
+    border-radius: 1rem;
+
+}
+  @media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #2c3e50;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all .5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover,a.active{
+      background: none;
+      color: #0082e6;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  }
+
+
+  @media screen and (max-width:500px) {
+    .posts{
+        width:90% !important;
+        height:90vh !important;
+    }
+    .likes{
+        background-color: rgb(242, 230, 215);
+    }
+    
+    .likes ul{
+        display: inline-block;
+    }
+    .likes ul li{
+        display: inline-block;
+    }
+    .likes ul li{
+        padding:0.1rem 0.5rem;
+        margin:0 0.5rem;
+        background-color: rgb(255, 255, 255);
+        border-radius:1rem;
+        border:1px solid black;
+    }
+    .likes ul li:hover{
+        background-color: #0082e6;
+        color:white;
+    }
+    .likes ul li a{
+        text-decoration: none;
+        color:black;
+        font-size: 1rem;;
+        
+    }
+    .likes ul li a:hover{
+        background-color: #0082e6;
+        color:white;
+    }
+    .nav{
+        position:fixed !important;
+        font-size:1rem !important;
+        text-align: center !important;
+    }
+    .logo{
+        display: block !important;
+        
+        height:5rem !important;
+        width:100% !important;
+        text-align: center !important;
+    }
+    .logo a{
+        float:none !important;
+        clear: both !important;
+        margin:0 !important;
+    }
+    nav .lis{
+        display: block !important;
+        height:10rem;
+        width:100%;
+        margin:0 !important;
+        float:none !important;
+        clear: both !important;
+        background-color: #0082e6 !important;
+        text-align: center !important;
+    }
+    nav .lis ul li a{
+        font-size:0.4rem !important;
+        padding:0 !important;
+    }
+    .lists li{
+      padding: 0 !important;
+    }
+    nav{
+        position: fixed !important;
+        top: 0 !important;
+        z-index: 999 !important;
+        height:10rem !important;
+        width:100% !important
+    }
+  }

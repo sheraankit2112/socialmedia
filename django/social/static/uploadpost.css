@@ -1,0 +1,141 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-size:10px;
+}
+
+body{
+    background-color: #90f4ff;
+}
+.uploadpost{
+    height:55vh;
+    width:40%;
+    margin:4rem auto;
+    background-color: aquamarine;
+}
+.h1{
+    text-align: center;
+}
+h1{
+    color:rgb(255, 255, 255);
+    font-size: 3rem;;
+    font-weight: 600;
+    background-color: rgb(255, 0, 0);
+    height:4rem;
+}
+.uploadpost .form{
+    position:relative;
+    
+    height:100%;
+    width:100%;
+    background-color: #ddd91c;
+}
+.form form{
+   position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    height:70%;
+    width:80%;
+    padding:6rem;
+     
+    text-align: center;
+
+}
+.form form input[type=file]{
+    height:30% !important;
+    width:100% !important;
+    font-size:2rem;
+    margin-left:20%;
+}
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-size:10px;
+  }
+  body{
+    
+    background-color: #90f4ff;
+  }
+  nav{
+    background-color: #0172c8;
+    height:8rem;
+    padding:2rem;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width:100%;
+  }
+  nav ul{
+    float:right;
+    text-align: center;
+    margin-right:10rem;
+  }
+  li{
+    display: inline-block;
+    padding:0.5rem 2rem;
+
+  }
+  li a{
+    font-size:2rem;
+    color:white;
+    padding:0.5rem 1rem;
+  }
+  li a:hover{
+    padding:0.5rem 1rem;
+    background-color: #17507b;
+    color:white;
+    border-radius: 1rem;
+  }
+  .logout:hover{
+    padding:0.5rem 1rem;
+    background-color: #ff0c0c;
+    color:white;
+    border-radius: 1rem;
+
+  }
+  .chat:hover{
+    padding:0.5rem 1rem;
+    background-color: #ddd91c;
+    color:rgb(0, 0, 0);
+    border-radius: 1rem;
+
+  }
+  .profile:hover{
+    padding:0.5rem 1rem;
+    background-color:#17507b;
+    color:rgb(255, 255, 255);
+    border-radius: 1rem;
+
+  }
+  .home:hover{
+    padding:0.5rem 1rem;
+    background-color:#568b00;
+    color:rgb(255, 255, 255);
+    border-radius: 1rem;
+
+  }
+  
+  .logo a{
+    font-size:3rem;
+    color:white;
+    font-weight: 700;
+    font-family: cursive;
+    float:left;
+    margin-left:6rem;
+  }
+form input[type=submit]{
+    padding:0.5rem 3rem;
+    font-size:1.5rem;
+    border-radius: 1rem;
+    background-color: #17507b;
+    color:white;
+
+}
+form input[type=submit]:hover{
+    background-color: #ff0c0c;
+}

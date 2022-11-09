@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/contact.css">
+    <style>
+        .errors{
+            font-size: 1.5rem;
+            color:red;
+        }
+        .success{
+            color:white;
+            background-color: green;
+            text-align: center;
+            margin-left:40rem;
+            margin-top:5rem;
+            font-size:2rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="forms">
+        <div class="signup">
+            <h1>Contact US</h1>
+        </div>
+        <div class="form">
+            <form action=" " method="post">
+                {% csrf_token %}
+                <input type="text" name="name" placeholder="Full Name"><br><br>
+                <input type="email" name="email" placeholder="EMAIL ID"><br><br>
+                
+                
+                <input type="integer" name="contact" placeholder="Mobile Number"><br><br>
+                <input type="text" name="message" placeholder="What can we help you?">
+
+                <input type="submit"><br><br>
+                
+        
+
+            </form>
+        </div>
+            
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .success{
+            font-size:2rem;
+            padding:0.5rem;
+            color:white;
+            background-color: green;
+            text-align: center;
+        }
+        .errors{
+            font-size:1.5rem;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+    {% for i in messages %}
+    <small {% if i.tags %} class="{{i.tags}}" {% endif %}>{{i}}</small>
+    {% endfor %} 
+    <br><br><br><br>
+    {% endif %}
+
+    <form action=" " method="post" enctype="multipart/form-data" novalidate>
+        {% csrf_token %}
+        {% for i in form %}
+        {{i}}{% if i.errors %}<br><span class="errors">{{i.errors|striptags}}</span>{% endif %}<br><br>
+        {% endfor %}<br>
+        
+        <br><br>
+        <input type="file" name="profile" accept="image/png, image/jpeg"><br><br>
+        <input type="submit" value="login"><br><br>
+        already have an account<a href="{% url 'login' %}">signup here</a>
+    </form>
+</body>
+</html>

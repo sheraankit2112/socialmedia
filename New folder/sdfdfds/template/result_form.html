@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/result_form.css">
+</head>
+<body>
+    <nav>
+        <div class="upcontainer">
+            <img src="../static/OIP-removebg-preview (1).png" class="logo">
+            <div class="overall-result">
+                <h3 STYLE="COLOR:WHITE; margin-TOP:-1REM; margin-bottom:0.4REM; PADDING:0.5REM; background-color: black; border-radius: 10PX;">OVERALL  RESULT</h2>
+                <CENTER><span style="color:white;">{{final}}%</span></CENTER>
+            </div>
+            <ul>
+                <li class="{% if request.path == '/' %} red {% endif %}"><a href="{% url 'home' %}">HOME</a></li>
+                <li class="{% if request.path == '/login' %} red {% endif %}"><a href="{% url 'login' %}">LOGIN</a></li>
+                <li class="{% if request.path == '/signup' %} red {% endif %}"><a href="{% url 'signup' %}">SIGN UP</a></li>
+                <li class="{% if request.path == '/result/about' %} red {% endif %}"><a href="{% url 'about' %}">ABOUT</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+    <div class="topper">
+        <center><h1>Toppers</h1></center>
+    </div>
+    <marquee style="color:white;">
+
+        
+        {% for i in datas %}
+        <p style="display:inline-block; margin-right:2rem;">{{i.name}}({{i.uid}})</p>
+        {% endfor %}
+    </marquee>
+    <div class="container">
+        <h3 class="exam">Chandigarh University Examinations 2022</h3>
+        
+        {% if data is not None %}
+        {% if data.name == name %}
+        
+        <div class="upper">
+            <table class="names">
+                <tr>
+                    <th>Roll No.:</th>
+                    <td>{{data.uid}}</td>
+                </tr>
+                <tr>
+                    <th>Candidate's Name:</td>
+                    <th>{{data.name}}</th>
+ 
+                </tr>
+                <tr>
+                    <th>Mother's Name:</td>
+                    <td>{{data.mother_name}}</td>
+
+                </tr>
+                <tr>
+                    <th>Father's Name:</td>
+                    <td>{{data.father_name}}</td>
+
+                </tr>
+                <tr>
+                    <th>School's Name:</td>
+                    <td>{{data.department_name}}</td>
+
+                </tr>
+            </table>
+        </div>
+
+        <table border="3" class="marks">
+            <tr class="color-blue">
+                <th>SUB CODE</th>
+                <TH>SUB NAME</TH>
+                <TH>THEORY</TH>
+                <TH>PRACTICAL</TH>
+                <TH>MARKS</TH>
+                <TH>GRADE</TH>
+            </tr>
+            <tr id="mid">
+                <td>CAP 606</td>
+                <Td>{{python.subject}}</Td>
+                <Td>{{python.theory}}</Td>
+                <Td>{{python.practical}}</Td>
+                <Td>{{python.total}}</Td>
+                <Td>{{python.grade}}</Td>
+
+            </tr>
+            <tr id="mid">
+                <td>CAP 607</td>
+                <Td>{{java.subject}}</Td>
+                <Td>{{java.theory}}</Td>
+                <Td>{{java.practical}}</Td>
+                <Td>{{java.total}}</Td>
+                <Td>{{java.grade}}</Td>
+
+            </tr>
+            <tr id="mid">
+                <td>CAP 608</td>
+                <Td>{{soft.subject}}</Td>
+                <Td>{{soft.theory}}</Td>
+                <Td>{{soft.practical}}</Td>
+                <Td>{{soft.total}}</Td>
+                <Td>{{soft.grade}}</Td>
+
+            </tr>
+            <tr id="mid">
+                <td>CAP 609</td>
+                <Td>{{aptitude.subject}}</Td>
+                <Td>{{aptitude.theory}}</Td>
+                <Td>{{aptitude.practical}}</Td>
+                <Td>{{aptitude.total}}</Td>
+                <Td>{{aptitude.grade}}</Td>
+
+            </tr>
+            <tr id="mid">
+                <td>CAP 610</td>
+                <Td>{{c_aptitude.subject}}</Td>
+                <Td>{{c_aptitude.theory}}</Td>
+                <Td>{{c_aptitude.practical}}</Td>
+                <Td>{{c_aptitude.total}}</Td>
+                <Td>{{c_aptitude.grade}}</Td>
+
+            </tr>
+            
+            <tr class="color-blue">
+                <th></th>
+                <th colspan="3">Result: {{result}}</th>
+                <td colspan="2">Total:{{summ}} (Out of 500)</td>
+            </tr>
+        </table>
+        {% elif data.name != name %}
+        <br><br><center><h1>Enter Wrong details!!! Please check again</h1></center><br><br>
+        <center><a href="{% url 'home' %}" style="font-size:2rem; color: blue;">Go back</a></center>
+        {% endif %}
+
+        {% elif data is None %}
+        <center><h1>no record found</h1></center>
+        {% endif %}
+        <br><center><a href="{% url 'home' %}" style="font-size:2rem; color: blue;">Check Another result</a></center>
+    </div>
+</body>
+</html>

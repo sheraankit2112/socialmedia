@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/home.css">
+    <style>
+        .errors{
+            font-size: 1.5rem;
+            color:red;
+        }
+        .success{
+            color:white;
+            background-color: green;
+            text-align: center;
+            margin-left:40rem;
+            margin-top:5rem;
+            font-size:2rem;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav">
+           
+            <div class="logo"><img src="../static/Anuj-designstyle-boots-m-removebg-preview.png" alt=""></div>
+            
+        </div>
+    </div><br><br>
+    <div class="headline">
+        <h1>Welcome To <span class="shera">My</span> Site</h1>
+    </div>
+    
+    <div class="header">
+        <div class="nav">
+            <div class="login">
+                <a class="button" href="{% url 'login' %}">Login</a>
+
+            </div>
+            <div class="my">
+                <a class="button" href="{% url 'contact' %}">Contact Us</a>
+            </div><br><br><br>
+            <div class="signup">
+                <a class="button" href="{% url 'signup' %}">Sign Up</a>
+            </div>
+        </div>
+    </div><br><br>
+</body>
+</html>
