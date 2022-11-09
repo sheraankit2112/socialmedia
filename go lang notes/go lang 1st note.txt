@@ -1,0 +1,22 @@
+1.Math package mein     "math.rand.Intn(10)"  function means     random number between  1 to 10
+
+2.Same Python ki trh:
+      for example:
+                       def add(a,b):          or        def add(a,b):
+                          return a+b                           print(a+b)
+
+                      print(add(1,2))                    add(1,2)
+
+in dono me jo difference h same vese hi go lang me hoga
+                example:
+                    func add(a,b int ){
+                          fmt.Println(a+b)                         yha pr agr hmne function me koi value return krvai h to hme use print krvane ki jrurat heh, but   agr hmne return nhi krvai sirf print krvai to hme simple call krenge example add(1,2)
+                   }
+                   func main(){
+                         add(1,2)
+                  }
+
+
+                same  func add(a,b int) int{(return type h ye function ka)
+                                  return a+b
+                           func main(){   fmt.Print(add(1,2)) }

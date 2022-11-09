@@ -1,0 +1,191 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+body{
+    background:linear-gradient(rgb(64, 61, 61),rgba(0,0,0)), url("./background-1939128_1280.webp")
+}
+
+
+
+
+/* *********************************************** navigation bar ********************************************************* */
+
+
+
+
+
+
+nav{
+    
+    height:10rem;
+}
+
+nav .logo img{
+    height:10rem;
+    width: 10rem;
+}
+nav .logo{
+    float:left;
+    
+    height:100%;
+    width:50%;
+    
+    
+}
+nav .logo img{
+    margin-left: 18rem;
+    margin-top:-0.5rem;
+}
+
+
+nav .navi{
+    float:right;
+    
+    height:100%;
+    width:50%;
+    text-align: center;
+}
+nav::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+nav .navi ul{
+    float: left;
+    margin-left: 0rem;
+    
+    
+    
+}
+nav .navi  ul li{
+    display: inline-block;
+    padding:2.7rem;
+}
+nav .navi ul li a{
+    font-size: 2rem;
+    text-decoration: none;
+    color:white;
+}
+nav .navi ul li a:hover{
+    color:rgb(231, 16, 16);
+}
+
+
+
+
+
+/* *********************************************** navigation bar end ************************************************* */
+
+
+
+
+
+/* ************************************************index page middle *************************************** */
+
+
+
+.middle{
+    height: 86vh;
+    
+    width:80%;
+    margin:0 auto;
+}
+.middle .myname{
+    float:left;
+    width:50%;
+    height: 100%;
+}
+.middle .profile{
+    float:right;
+    width: 50%;
+    height: 100%;
+   
+    text-align: center;
+}
+.middle::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.middle .myname .name{
+    margin-top:25rem;
+    margin-left:6rem;
+    
+}
+.middle .myname h1{
+    font-size:4rem;
+    color:white;
+}
+.kumar{
+    font-size: 4rem;
+    color:rgb(255, 179, 0);
+}
+.middle .myname p{
+    font-size: 1.5rem;
+    color:white;
+}
+.middle .myname .name .button{
+    background-color: black;
+    padding:0.5rem;
+    display: inline-block;
+    padding-right: 1rem;
+    padding-left:1rem;
+}
+.middle .myname .name .button a{
+    color:white;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+
+}
+.profile{
+    position: relative;
+    height: 100%;
+}
+.profile img{
+    transition: bottom 1s, left 1s;
+}
+.profile .shape{
+    height:80%;
+    width: 70%;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    transition: bottom 1s, left 1s;
+    
+}
+.profile .pic{
+    height:100%;
+    width:120%;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+}
+
+
+/* .profile:hover .shape{
+    position: absolute;
+    top:45%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    transition: bottom 1s, left 1s;
+     
+} */
+.profile:hover .pic{
+    height:100%;
+    width:120%;
+    position: absolute;
+    top:50%;
+    left:40%;
+    transform:translate(-50%,-50%);
+    left:45%;
+
+}

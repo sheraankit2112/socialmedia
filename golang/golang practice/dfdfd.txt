@@ -1,0 +1,7 @@
+1. Advance programs
+2. data structure
+3. packages data time/sorting
+4. CRUD operation by using golang with any database
+5. CRUD operation deploy on github
+6. mention project in CV ( discuss with parvinder bhai )
+7. 
